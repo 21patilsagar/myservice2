@@ -1,20 +1,22 @@
 package com.cerillion.rhos;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class HomeController {
 
-	@RequestMapping("/index")
-	public String index() {		
-		return "index.jsp";
+	@GetMapping("/index")
+	public ModelAndView index() {
+		ModelAndView view = new ModelAndView("index.jsp");
+		return view;
 	}
 	
 	@GetMapping("/")
-	public String home() {		
-		return "Welcome to home!!";
+	public ModelAndView home() {
+		ModelAndView view = new ModelAndView("home.jsp");
+		return view;
 	}
 	
 }

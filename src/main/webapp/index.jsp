@@ -1,9 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My Home</title>
+</head>
 <body>
-
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-
+Hello from my JAR service index..!!
 </body>
 </html>
