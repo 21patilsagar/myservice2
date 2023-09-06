@@ -28,10 +28,6 @@
 			<version>9.0.79</version>
 		</dependency>
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -48,9 +44,21 @@
 	</build>
 	<pluginRepositories>
 		<pluginRepository>
-			<id>cerillion-nexus-repository</id>
-			<url>http://nexus3-openshift.apps.openshift.cerillion-cloud.com/</url>			
+			<id>local-maven-plugin-repo</id>
+			<url>file:///${project.basedir}/local-maven-repo</url>
 		</pluginRepository>
 	</pluginRepositories>
+	
+		<repositories>
+		<repository>
+			<id>nexus-repo</id>
+			<url>http://nexus3-openshift.apps.openshift.cerillion-cloud.com/</url>
+		</repository>
+
+		<repository>
+			<id>local-maven-repo</id>
+			<url>file:///${project.basedir}/local-maven-repo</url>
+		</repository>
+	</repositories>
 
 </project>
